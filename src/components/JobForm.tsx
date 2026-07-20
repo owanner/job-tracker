@@ -29,7 +29,6 @@ export function JobForm({ open, onClose, editing }: JobFormProps) {
     if (open && !editing) {
       const form = document.getElementById('job-form') as HTMLFormElement
       form?.reset()
-      ;(form as any).matchScore.value = 3
     }
   }, [open, editing])
 
