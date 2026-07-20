@@ -4,7 +4,7 @@ import { useJobs } from '../contexts/JobContext'
 import { STATUS_COLORS, PRIORITY_COLORS } from '../data/dropdowns'
 import { GlassCard } from './ui/GlassCard'
 import { GlassButton } from './ui/GlassButton'
-import { StarRating } from './ui/StarRating'
+
 import { JobForm } from './JobForm'
 import type { Job } from '../types'
 
@@ -78,7 +78,7 @@ export function JobList() {
                         {job.location}{job.country ? `, ${job.country}` : ''}
                       </span>
                     )}
-                    <StarRating value={job.matchScore} readonly />
+
                   </div>
                 </div>
 

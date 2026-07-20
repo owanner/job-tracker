@@ -24,7 +24,6 @@ interviews, and offers — with a Liquid Glass UI.
 | 🔐 **Authentication** | Sign up & log in with per-user persistence |
 | 📊 **Dashboard** | Stats cards + interactive pie chart |
 | 📝 **Full CRUD** | Create, edit, and delete job applications |
-| ⭐ **Match Score** | Rate how well a role fits your profile (1–5) |
 | 🏷️ **Color Badges** | Status and priority with intuitive colors |
 | 📱 **Fully Responsive** | Collapsible sidebar and adaptive layout |
 | 🎨 **Liquid Glass UI** | Design inspired by Apple's design language |
@@ -90,8 +89,7 @@ src/
 │   │   ├── GlassInput.tsx
 │   │   ├── GlassSelect.tsx
 │   │   ├── GlassButton.tsx
-│   │   ├── Modal.tsx
-│   │   └── StarRating.tsx
+│   │   └── Modal.tsx
 │   ├── Layout.tsx       # Sidebar + Header
 │   ├── Dashboard.tsx    # Stats + Pie Chart
 │   ├── JobList.tsx      # Applications list
@@ -135,7 +133,6 @@ bg-gradient-to-r from-purple-500/80 to-blue-500/80
 - Last Updated
 - Next Action + Due Date
 - Priority, Current Stage
-- Match Score (1–5 ⭐)
 - Notes, Result
 
 ## 📄 License

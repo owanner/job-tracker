@@ -25,7 +25,6 @@ export interface Job {
   nextActionDate: string
   priority: string
   stage: string
-  matchScore: number
   notes: string
   result: string
 }

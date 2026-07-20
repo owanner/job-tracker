@@ -3,7 +3,7 @@ import { Modal } from './ui/Modal'
 import { GlassInput } from './ui/GlassInput'
 import { GlassSelect } from './ui/GlassSelect'
 import { GlassButton } from './ui/GlassButton'
-import { StarRating } from './ui/StarRating'
+
 import { useJobs } from '../contexts/JobContext'
 import { STATUS, PRIORITY, PLATFORM, STAGE, CURRENCIES } from '../data/dropdowns'
 import type { Job } from '../types'
@@ -54,7 +54,6 @@ export function JobForm({ open, onClose, editing }: JobFormProps) {
       nextActionDate: fd.get('nextActionDate') as string,
       priority: fd.get('priority') as string,
       stage: fd.get('stage') as string,
-      matchScore: Number(fd.get('matchScore')) || 3,
       notes: fd.get('notes') as string,
       result: fd.get('result') as string,
     }
@@ -156,17 +155,6 @@ export function JobForm({ open, onClose, editing }: JobFormProps) {
               <GlassInput name="result" defaultValue={editing?.result} placeholder="Resultado final" />
             </Field>
           </div>
-        </Section>
-
-        <Section title="Match com Perfil">
-          <input type="hidden" name="matchScore" value={editing?.matchScore || 3} />
-          <StarRating
-            value={editing?.matchScore || 3}
-            onChange={(v) => {
-              const input = document.querySelector('input[name="matchScore"]') as HTMLInputElement
-              if (input) input.value = String(v)
-            }}
-          />
         </Section>
 
         <Section title="Observações">
